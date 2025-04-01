@@ -1,0 +1,119 @@
+/* 🎨 STILE NAVIGAZIONE */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.9);
+  color: #181818;
+  backdrop-filter: blur(5.4px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background 0.3s ease; /* Transizione per il background */
+}
+
+.logo img {
+  width: 70px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  list-style: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-links li:hover {
+  border-bottom: 2px solid #70b2e2;
+}
+
+/* Menu per dispositivi mobili */
+.menu {
+  display: none; /* Nascondi il menu per default */
+  cursor: pointer; /* Cambia il cursore per il pulsante */
+}
+
+/* Media Query per Tablet e Schermi Piccoli (max 750px) */
+@media (max-width: 750px) {
+  .nav-links {
+    position: absolute;
+    top: 80px; /* Sposta il menu sotto la nav */
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.9);
+    color: #181818;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.5px);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    max-height: 0; /* Imposta l'altezza massima a 0 per nascondere il menu */
+    overflow: hidden; /* Nascondi il contenuto in eccesso */
+    transition: max-height 0.4s ease, opacity 0.4s ease; /* Aggiungi transizione */
+    opacity: 0; /* Nascondi il menu */
+  }
+
+  .nav-links.active {
+    max-height: 300px; /* Imposta un'altezza massima per il menu espanso */
+    opacity: 1; /* Mostra il menu */
+  }
+
+  .menu {
+    display: flex; /* Mostra il pulsante del menu */
+  }
+}
+
+/* Media Query per Mobile (max 480px) */
+@media (max-width: 480px) {
+  .nav {
+    padding: 10px 15px; /* Riduci il padding per schermi più piccoli */
+  }
+
+  .logo img {
+    width: 60px; /* Riduci la dimensione del logo */
+  }
+
+  .nav-links li {
+    padding: 8px 15px; /* Riduci il padding per i link */
+  }
+}
+
+/* Stile Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Pulsanti di chiusura e menu */
+.close,
+.menu_bottom {
+  display: none; /* Nascondi per default */
+}
+
+/* Media Query per visualizzare il menu mobile */
+@media (max-width: 767px) {
+  .menu_bottom {
+    display: block; /* Mostra il menu bottom */
+  }
+}

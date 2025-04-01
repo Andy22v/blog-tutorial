@@ -1,0 +1,198 @@
+/* 🎨 PALETTE DI COLORI MIGLIORATA */
+:root {
+  --primary-color: #2d6a4f; /* Verde elegante e professionale */
+  --secondary-color: #ffb703; /* Giallo oro per contrasto */
+  --accent-bg: #f8f9fa; /* Sfondo chiaro, moderno e leggero */
+  --text-color: #222; /* Testo principale */
+  --light-text: #555; /* Testo secondario */
+  --border-radius: 15px;
+  --transition: all 0.3s ease-in-out;
+  --shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ SEZIONE ABOUT */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 750px;
+  gap: 50px;
+  padding: 80px 5%;
+  margin-top: 150px;
+  background-color: var(--accent-bg);
+  text-align: center;
+  position: relative;
+}
+
+/* ✅ TITOLO ABOUT */
+.about_title {
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--primary-color);
+  letter-spacing: 1.5px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* 🔥 Linea decorativa sotto il titolo */
+.about_title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: var(--secondary-color);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ✅ CONTAINER INFO */
+.aboutInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+/* ✅ IMMAGINI ABOUT */
+.aboutImg_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: auto;
+  flex-wrap: wrap;
+  gap: 15px;
+  position: relative;
+}
+
+.about_img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+/* ✅ Effetto Hover su Immagine */
+.about_img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ CONTENITORE TESTO */
+.info_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 45%;
+  text-align: left;
+}
+
+/* ✅ TESTO ABOUT */
+.p_container {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.p_container h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.p_container p {
+  color: var(--light-text);
+  font-size: 18px;
+  line-height: 1.8;
+  transition: var(--transition);
+}
+
+/* ✅ Effetto Hover sul Testo */
+.p_container p:hover {
+  color: var(--text-color);
+}
+
+/* ✅ MEDIA QUERY: Adattamento per Tablet (max 768px) */
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 5%;
+    margin-top: 120px;
+  }
+
+  .aboutInfo {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .aboutImg_container,
+  .info_container {
+    width: 80%;
+    text-align: center;
+  }
+
+  .info_container {
+    align-items: center;
+  }
+
+  .p_container h3 {
+    font-size: 20px;
+  }
+
+  .p_container p {
+    font-size: 16px;
+  }
+}
+
+/* ✅ MEDIA QUERY: Adattamento per Mobile (max 480px) */
+@media (max-width: 480px) {
+  .about {
+    padding: 50px 5%;
+    margin-top: 100px;
+  }
+
+  .about_title {
+    font-size: 26px;
+  }
+
+  .about_title::after {
+    width: 60px;
+  }
+
+  .aboutInfo {
+    gap: 30px;
+  }
+
+  .aboutImg_container {
+    width: 100%;
+  }
+
+  .about_img {
+    max-width: 250px;
+  }
+
+  .info_container {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .p_container h3 {
+    font-size: 18px;
+  }
+
+  .p_container p {
+    font-size: 15px;
+  }
+}

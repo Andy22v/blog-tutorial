@@ -1,0 +1,164 @@
+/* 🎨 PALETTE DI COLORI MIGLIORATA */
+:root {
+  --primary-color: #2d6a4f; /* Verde scuro, professionale e naturale */
+  --secondary-color: #ffb703; /* Giallo oro, perfetto per CTA */
+  --bg-color: #f1f5f9; /* Grigio chiaro, moderno */
+  --text-color: #222; /* Testo più scuro per leggibilità */
+  --light-text: #555; /* Grigio elegante per i testi secondari */
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-radius: 15px;
+  --transition: all 0.3s ease-in-out;
+  --shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ SEZIONE INFO */
+.info {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  background: var(--bg-color);
+}
+
+/* ✅ CONTENITORE INFO */
+.info_contain {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* ✅ CARD INFO */
+.info_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  width: 400px;
+  height: 480px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✅ Effetto Hover su Card */
+.info_card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ Stile del Titolo */
+.info_card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+/* ✅ Stile del Testo */
+.info_card p {
+  font-size: 16px;
+  color: var(--light-text);
+  line-height: 1.6;
+}
+
+/* ✅ CONTAINER DEL PULSANTE */
+.btninfo_contain {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* ✅ PULSANTE INFO */
+.infobtn {
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 15px 35px;
+  background-color: var(--secondary-color);
+  border: none;
+  color: #222;
+  border-radius: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+}
+
+/* ✅ Effetto Hover sul Pulsante */
+.infobtn:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ MEDIA QUERY: Adattamento per Tablet (max 768px) */
+@media (max-width: 768px) {
+  .info {
+    padding: 40px 0;
+  }
+
+  .info_contain {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .info_card {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+  }
+
+  .info_card h3 {
+    font-size: 22px;
+  }
+
+  .info_card p {
+    font-size: 15px;
+  }
+}
+
+/* ✅ MEDIA QUERY: Adattamento per Mobile (max 480px) */
+@media (max-width: 480px) {
+  .info {
+    padding: 30px 0;
+  }
+
+  .info_contain {
+    width: 95%;
+  }
+
+  .info_card {
+    padding: 25px;
+  }
+
+  .info_card h3 {
+    font-size: 20px;
+  }
+
+  .info_card p {
+    font-size: 14px;
+  }
+
+  .infobtn {
+    font-size: 16px;
+    padding: 12px 30px;
+  }
+}

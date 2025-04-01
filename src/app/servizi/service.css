@@ -1,0 +1,235 @@
+/* 🎨 PALETTE DI COLORI MIGLIORATA */
+:root {
+  --primary-color: #2d6a4f; /* Verde scuro, professionale e naturale */
+  --secondary-color: #ffb703; /* Giallo dorato, perfetto per CTA */
+  --bg-color: #f1f5f9; /* Grigio chiaro, per un aspetto moderno */
+  --text-color: #222; /* Testo più scuro per leggibilità */
+  --light-text: #555; /* Grigio elegante per i testi secondari */
+  --border-radius: 15px;
+  --transition: all 0.3s ease-in-out;
+  --shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ CONTENITORE PRINCIPALE */
+.service_contain {
+  width: 90%;
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 60px;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  transition: var(--transition);
+}
+
+/* ✅ TITOLO PRINCIPALE */
+.service h2 {
+  font-size: 36px;
+  color: var(--primary-color);
+  font-weight: 800;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+/* ✅ TESTO INTRODUTTIVO */
+.service p {
+  font-size: 18px;
+  color: var(--light-text);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 35px;
+  line-height: 1.6;
+}
+
+/* ✅ SEZIONE SERVIZI */
+.service1,
+.service2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-color);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  width: 48%;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✅ Effetto Hover su Servizi */
+.service1:hover,
+.service2:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.service1:hover h3,
+.service2:hover h3 {
+  color: white;
+}
+
+.service1:hover p,
+.service2:hover p {
+  color: #f8f8f8;
+}
+
+.service1::before,
+.service2::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background: var(--secondary-color);
+  opacity: 0.2;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.service1:hover::before,
+.service2:hover::before {
+  width: 120%;
+  height: 120%;
+  top: -10%;
+  left: -10%;
+  opacity: 0.1;
+}
+
+/* ✅ ICONE */
+.service1 img,
+.service2 img {
+  width: 70px;
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.service1:hover img,
+.service2:hover img {
+  transform: scale(1.1);
+}
+
+/* ✅ TITOLI SERVIZI */
+.service1 h3,
+.service2 h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+/* ✅ TESTO SERVIZI */
+.service1 p,
+.service2 p {
+  font-size: 16px;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* ✅ BOTTONE CALL TO ACTION */
+.service_btn {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.service_btn a {
+  display: inline-block;
+  background: var(--secondary-color);
+  color: #222;
+  padding: 18px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.service_btn a:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: scale(1.08);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ MEDIA QUERY: Adattamento per Tablet (max 768px) */
+@media (max-width: 768px) {
+  .service_contain {
+    flex-direction: column;
+    padding: 40px; /* Ridotto il padding per tablet */
+  }
+
+  .service1,
+  .service2 {
+    width: 100%; /* Occupa tutta la larghezza */
+    margin-bottom: 25px;
+  }
+
+  .service h2 {
+    font-size: 30px; /* Ridotto il font size */
+  }
+
+  .service p {
+    font-size: 16px; /* Ridotto il font size */
+  }
+}
+
+/* ✅ MEDIA QUERY: Adattamento per Schermi Medi (max 600px) */
+@media (max-width: 600px) {
+  .service1,
+  .service2 {
+    padding: 15px; /* Ridotto il padding per i servizi */
+  }
+
+  .service_btn a {
+    padding: 12px 25px; /* Ridotto il padding per il bottone */
+    font-size: 18px; /* Ridotto il font size */
+  }
+}
+
+/* ✅ MEDIA QUERY: Adattamento per Mobile (max 480px) */
+@media (max-width: 480px) {
+  .service_contain {
+    width: 95%; /* Aumentato leggermente per mobile */
+    padding: 25px; /* Ridotto il padding per mobile */
+  }
+
+  .service {
+    width: 90%;
+  }
+
+  .service img {
+    width: 90%;
+  }
+
+  .service1,
+  .service2 {
+    padding: 20px; /* Ridotto il padding */
+  }
+
+  .service1 img,
+  .service2 img {
+    width: 50px; /* Ridotto il width delle immagini */
+  }
+
+  .service1 h3,
+  .service2 h3 {
+    font-size: 18px; /* Ridotto il font size */
+  }
+
+  .service1 p,
+  .service2 p {
+    font-size: 14px; /* Ridotto il font size */
+  }
+
+  .service_btn a {
+    font-size: 16px; /* Ridotto il font size */
+    padding: 12px 30px; /* Ridotto il padding */
+  }
+}
