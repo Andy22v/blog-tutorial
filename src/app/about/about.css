@@ -178,16 +178,16 @@
   }
 
   .aboutImg_container {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
   }
 
   .p_container h3 {
-    font-size: 16px;
+    font-size: 24px;
   }
 
   .p_container p {
-    font-size: 10px;
+    font-size: 18px;
   }
 
   .experience {

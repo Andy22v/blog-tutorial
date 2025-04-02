@@ -20,6 +20,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 50px 0;
+  text-align: center;
 }
 
 .info_title {
@@ -28,10 +29,6 @@
   color: var(--primary-color);
   margin-bottom: 40px;
   border-bottom: 2px solid var(--secondary-color);
-}
-
-.info_title p {
-  text-align: center;
 }
 
 /* ✅ CONTENITORE INFO */
