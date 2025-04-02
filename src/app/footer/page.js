@@ -5,7 +5,7 @@ export default function Footer() {
       <div className="footer">
         <div className="bg_img">
           <a>
-            <img src="./email.png" />
+            <img src="./gmail.png" />
           </a>
           <a>
             <img src="./facebook.png" />

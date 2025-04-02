@@ -10,7 +10,7 @@
   top: 0;
   left: 0;
   z-index: 9999;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgb(255, 255, 255);
   color: #181818;
   backdrop-filter: blur(5.4px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -56,7 +56,7 @@
     background: rgba(255, 255, 255, 0.9);
     color: #181818;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.5px);
+    backdrop-filter: blur(2.5px);
     border: 1px solid rgba(255, 255, 255, 0.11);
     max-height: 0; /* Imposta l'altezza massima a 0 per nascondere il menu */
     overflow: hidden; /* Nascondi il contenuto in eccesso */
@@ -98,7 +98,7 @@
   width: 250px;
   z-index: 999;
   background-color: white;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgb(137, 137, 137);
   display: flex;
   flex-direction: column;
   align-items: flex-start;

@@ -13,9 +13,9 @@ export default function Home() {
       <main className={styles.main}>
         <Navbar />
         <Hero />
-        <Service />
         <About />
         <Info />
+        <Service />
         <Feedback />
       </main>
       <Footer />

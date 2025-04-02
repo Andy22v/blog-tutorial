@@ -3,6 +3,11 @@ import "./info.css";
 export default function Info() {
   return (
     <div className="info">
+      <h2 className="info_title">I Miei Servizi</h2>
+      <p>
+        Offro una gamma completa di servizi nutrizionali personalizzati per
+        aiutarti a raggiungere i tuoi obiettivi di salute e benessere.
+      </p>
       <div className="info_contain">
         <div className="info_card">
           <h3>Analisi Composizione corporea.</h3>
@@ -14,9 +19,6 @@ export default function Info() {
             di allenamento personalizzato e un’alimentazione equilibrata, in
             grado di migliorare la salute e la forma fisica.
           </p>
-          <div className="btninfo_contain">
-            <button className="infobtn">Informazioni</button>
-          </div>
         </div>
         <div className="info_card">
           <h3>Analisi stato nutrizionale.</h3>
@@ -27,9 +29,6 @@ export default function Info() {
             biochimici e dietetici per individuare eventuali carenze o eccessi
             nutrizionali.
           </p>
-          <div className="btninfo_contain">
-            <button className="infobtn">Informazioni</button>
-          </div>
         </div>
         <div className="info_card">
           <h3>Bioimpedenziometria</h3>
@@ -41,9 +40,6 @@ export default function Info() {
             possibile stimare la quantità di massa grassa e di massa magra
             presente nel corpo.
           </p>
-          <div className="btninfo_contain">
-            <button className="infobtn">Informazioni</button>
-          </div>
         </div>
         <div className="info_card">
           <h3>Dieta</h3>
@@ -54,9 +50,6 @@ export default function Info() {
             sull’equilibrio tra le calorie introdotte e quelle consumate, su una
             scelta accurata dei cibi e sulla regolarità dei pasti.
           </p>
-          <div className="btninfo_contain">
-            <button className="infobtn">Informazioni</button>
-          </div>
         </div>
         <div className="info_card">
           <h3>Educazione e alimentazione familiare</h3>
@@ -69,9 +62,6 @@ export default function Info() {
             aiutare a prevenire malattie croniche, come obesità, diabete e
             malattie cardiache.
           </p>
-          <div className="btninfo_contain">
-            <button className="infobtn">Informazioni</button>
-          </div>
         </div>
         <div className="info_card">
           <h3>Plicometria</h3>
@@ -81,9 +71,6 @@ export default function Info() {
             plicometro. Questo test viene spesso utilizzato per valutare la
             composizione corporea e il livello di grasso sottocutaneo.
           </p>
-          <div className="btninfo_contain">
-            <button className="infobtn">Informazioni</button>
-          </div>
         </div>
         <div className="info_card">
           <h3>Visita per consulenza nutrizionale</h3>
@@ -94,9 +81,6 @@ export default function Info() {
             L’obiettivo è fornire consigli personalizzati per raggiungere una
             dieta equilibrata e sana.
           </p>
-          <div className="btninfo_contain">
-            <button className="infobtn">Informazioni</button>
-          </div>
         </div>
       </div>
     </div>

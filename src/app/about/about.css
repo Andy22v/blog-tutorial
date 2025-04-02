@@ -1,149 +1,123 @@
-/* 🎨 PALETTE DI COLORI MIGLIORATA */
-:root {
-  --primary-color: #2d6a4f; /* Verde elegante e professionale */
-  --secondary-color: #ffb703; /* Giallo oro per contrasto */
-  --accent-bg: #f8f9fa; /* Sfondo chiaro, moderno e leggero */
-  --text-color: #222; /* Testo principale */
-  --light-text: #555; /* Testo secondario */
-  --border-radius: 15px;
-  --transition: all 0.3s ease-in-out;
-  --shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* ✅ SEZIONE ABOUT */
 .about {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  width: 100%;
-  min-height: 750px;
-  gap: 50px;
-  padding: 80px 5%;
-  margin-top: 150px;
-  background-color: var(--accent-bg);
-  text-align: center;
-  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
 }
 
-/* ✅ TITOLO ABOUT */
 .about_title {
-  text-transform: uppercase;
   font-size: 32px;
   font-weight: bold;
+  margin-bottom: 30px;
   color: var(--primary-color);
-  letter-spacing: 1.5px;
-  position: relative;
-  padding-bottom: 10px;
+  border-bottom: 2px solid var(--secondary-color);
 }
 
-/* 🔥 Linea decorativa sotto il titolo */
-.about_title::after {
-  content: "";
-  width: 80px;
-  height: 4px;
-  background: var(--secondary-color);
-  display: block;
-  margin: 10px auto 0;
-  border-radius: 2px;
-}
-
-/* ✅ CONTAINER INFO */
 .aboutInfo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 50px;
 }
 
-/* ✅ IMMAGINI ABOUT */
 .aboutImg_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 45%;
-  height: auto;
-  flex-wrap: wrap;
-  gap: 15px;
-  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .about_img {
   width: 100%;
-  max-width: 350px;
-  height: auto;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
-  transition: var(--transition);
+  height: 100%;
+  object-fit: cover;
 }
 
-/* ✅ Effetto Hover su Immagine */
-.about_img:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-/* ✅ CONTENITORE TESTO */
 .info_container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 45%;
-  text-align: left;
-}
-
-/* ✅ TESTO ABOUT */
-.p_container {
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  max-width: 600px;
 }
 
 .p_container h3 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
-  color: var(--primary-color);
+  margin-bottom: 10px;
 }
 
 .p_container p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.experience_contain {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.experience {
+  width: 200px;
+  border-radius: 10px;
+  background-color: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bolder;
   color: var(--light-text);
-  font-size: 18px;
-  line-height: 1.8;
+  gap: 10px;
+  padding: 10px;
+}
+
+.experience img {
+  width: 30px;
+}
+
+.service {
+  border-radius: var(--border-radius);
+  padding: 20px;
+  width: 500px;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-/* ✅ Effetto Hover sul Testo */
-.p_container p:hover {
+.service img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.service h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 16px;
   color: var(--text-color);
+  line-height: 1.5;
 }
 
-/* ✅ MEDIA QUERY: Adattamento per Tablet (max 768px) */
-@media (max-width: 768px) {
-  .about {
-    padding: 60px 5%;
-    margin-top: 120px;
-  }
-
+@media (max-width: 1024px) {
   .aboutInfo {
     flex-direction: column;
-    align-items: center;
-    gap: 40px;
+    gap: 30px;
   }
 
-  .aboutImg_container,
-  .info_container {
-    width: 80%;
-    text-align: center;
+  .aboutImg_container {
+    width: 150px;
+    height: 150px;
   }
 
   .info_container {
-    align-items: center;
+    max-width: 100%;
   }
 
   .p_container h3 {
@@ -151,41 +125,24 @@
   }
 
   .p_container p {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
-/* ✅ MEDIA QUERY: Adattamento per Mobile (max 480px) */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .about {
-    padding: 50px 5%;
-    margin-top: 100px;
+    height: auto;
+    padding: 30px 20px;
   }
 
   .about_title {
-    font-size: 26px;
-  }
-
-  .about_title::after {
-    width: 60px;
-  }
-
-  .aboutInfo {
-    gap: 30px;
+    font-size: 28px;
+    margin-bottom: 20px;
   }
 
   .aboutImg_container {
-    width: 100%;
-  }
-
-  .about_img {
-    max-width: 250px;
-  }
-
-  .info_container {
-    width: 100%;
-    text-align: center;
-    align-items: center;
+    width: 120px;
+    height: 120px;
   }
 
   .p_container h3 {
@@ -193,6 +150,59 @@
   }
 
   .p_container p {
-    font-size: 15px;
+    font-size: 12px;
+  }
+
+  .experience_contain {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .service {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    margin-top: 50px;
+  }
+  .about_title {
+    font-size: 24px;
+  }
+
+  .aboutImg_container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .p_container h3 {
+    font-size: 16px;
+  }
+
+  .p_container p {
+    font-size: 10px;
+  }
+
+  .experience {
+    max-width: 250px;
+  }
+
+  .service img {
+    width: 80px;
+  }
+
+  .service h3 {
+    font-size: 20px;
+  }
+
+  .service p {
+    font-size: 14px;
   }
 }

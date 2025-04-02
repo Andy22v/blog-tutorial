@@ -18,8 +18,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 50px 0;
-  background: var(--bg-color);
+}
+
+.info_title {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.info_title p {
+  text-align: center;
 }
 
 /* ✅ CONTENITORE INFO */
@@ -29,6 +41,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 40px;
   flex-wrap: wrap;
   gap: 30px;
 }
@@ -39,13 +55,13 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  background-color: white;
-  padding: 40px;
+
+  padding: 20px;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   transition: var(--transition);
-  width: 400px;
-  height: 480px;
+  width: 500px;
+  height: auto;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -67,7 +83,7 @@
 
 /* ✅ Stile del Testo */
 .info_card p {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--light-text);
   line-height: 1.6;
 }
